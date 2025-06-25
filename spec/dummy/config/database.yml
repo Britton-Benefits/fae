@@ -18,10 +18,3 @@ test:
   username: <%= ENV['MYSQL_USER'] || 'root' %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
   host: <%= ENV['DEV_MYSQL_HOST'] || 'localhost' %>
-
-# Fae Dummy app on Render
-production:
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: <%= ENV['DATABASE_URL'] %>
